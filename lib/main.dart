@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app2/pregunta.dart';
+import 'package:quiz_app2/preguntaQuiz.dart';
+import 'package:quiz_app2/respuesta.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -12,39 +15,11 @@ class Quizapp2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Quizapp2'),
+          title: Text('Quiz app2'),
         ),
-        body: Column(children: [
-          Center(
-            child: Text(
-              '¿ que es una funcion en programacion?',
-              style: TextStyle(
-                fontSize: 30,
-              ),
-            ),
-          ),
-          RaisedButton(
-            disabledColor: Colors.amber,
-            child: Text(
-                'a.una seccion de un programa que calcula un valor de manera independiente'),
-            splashColor: Colors.amber,
-            color: Colors.green,
-            onPressed: () {},
-          ),
-          RaisedButton(
-            disabledColor: Colors.amber,
-            child: Text('b. es una cadena de texto'),
-            splashColor: Colors.amber,
-            color: Colors.green,
-            onPressed: () {},
-          ),
-          RaisedButton(
-            disabledColor: Colors.amber,
-            child: Text('c. es un ciclo infinito'),
-            splashColor: Colors.amber,
-            color: Colors.green,
-            onPressed: () {},
-          )
-        ]));
+        body: Container(
+          width: double.infinity,
+          child: PreguntaQuiz(),
+        ));
   }
 }
